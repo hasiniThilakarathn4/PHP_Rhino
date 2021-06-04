@@ -5,9 +5,9 @@ interface PaymentInterface{
 }
 
 interface LoginInterface{
-    public function login();
+    public function loginFirst();
 }
-class Paypal implements PaymentInterface {
+class Paypal implements PaymentInterface, LoginInterface {
     public function payNow() {
         echo 'payapl';
      }
@@ -49,13 +49,15 @@ class BuyProduct {
         $paymentType->paymentProcess();
 
     }
-    public function onlinePay(LoginInterface $paymentType){
+    public function onlinepay( LoginInterface $paymentType) {
         $paymentType->paymentProcess();
+
     }
+
 
 }
 
-$paymentType = new Visa();
+$paymentType = new Paypal();
 $buyProduct = new BuyProduct();
 
-$buyProduct->pay($paymentType);
+$buyProduct->onlinepay($paymentType);
