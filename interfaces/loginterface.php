@@ -10,7 +10,7 @@ interface UserInfo {
     public function get_username();
 }
 
-//an interface extending from more than one interfaces
+//an interface from more than one interfaces
 interface BookLog extends BookInfo, UserInfo {
 
     public function get_book_log();
