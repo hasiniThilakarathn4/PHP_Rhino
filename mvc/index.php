@@ -16,7 +16,7 @@ $book = 'Harry Potter';
 
 $book_controller  = new BookController($book);
 $book_view = new BookView($book, $book_controller);
-$book = $book_controller->passBook($clicked);
-echo $book_view->showBook($book);
+$passed_book = $book_controller->passBook($clicked);
+echo $book_view->showBook($passed_book);
 
 
