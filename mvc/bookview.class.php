@@ -14,12 +14,12 @@ class BookView extends Books{
 
     public function showBook($book){
 
-            if ($book) {
-                echo $this->book_controller->passBook($this->clicked);
-            } else {
-                echo  'Invalid book name';
+        if ($book) {
+            echo $this->book_controller->passBook($this->clicked);
+        } else {
+            echo  'Invalid book name';
                
-            }
+        }
     } 
 
    
