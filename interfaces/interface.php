@@ -2,10 +2,12 @@
 
 interface PaymentInterface{
     public function payNow();
+    public function paymentProcess();
 }
 
 interface LoginInterface{
     public function loginFirst();
+    public function paymentProcess();
 }
 class Paypal implements PaymentInterface, LoginInterface {
     public function payNow() {
@@ -21,12 +23,12 @@ class Paypal implements PaymentInterface, LoginInterface {
     }
 }
 
-class BakTrasfer implements PaymentInterface {
+class BankTrasfer implements PaymentInterface, LoginInterface {
     public function payNow() { 
         echo 'bank tranfer';
     }
     public function loginFirst() {
-        echo 'payapl logged in';
+        echo 'bank logged in';
     }
 
     public function paymentProcess(){
