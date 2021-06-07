@@ -56,6 +56,10 @@ class Calculations {
 }
 
 $square_area = new SquareCalculations(2,3);
+
 $triangle_area = new TriangleCalculations(6,3);
+
+
+
 
 
