@@ -47,18 +47,13 @@ class Calculations {
 
     public function sum_area(Shape $shapes){
         foreach ($shapes as $shape) {
-            $area[] = $shape->area();
+            $area[$shape] = $shape->area();
         }
-    return array_sum($area);
+    echo array_sum($area);
 
     }
 
 }
-
-$square_area = new SquareCalculations(2,3);
-
-$triangle_area = new TriangleCalculations(6,3);
-
 
 
 
