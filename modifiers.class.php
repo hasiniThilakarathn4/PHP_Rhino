@@ -16,7 +16,7 @@ echo $test->fname ;
 echo $test->lname ; //Cannot access protected property
 echo $test->age ;
 
-$test->setFname('Hasini'); 
+$test->setFname('Hasini'); //cannot access
 
 //protected can only be accessed by a child-->error
 $test->setLname('Thilakarathna'); 
