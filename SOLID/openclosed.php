@@ -1,7 +1,7 @@
 <?php
 
 interface Shape {
-    public function area();
+    public function area() : int;
 }
 
 abstract class Square implements Shape {
@@ -21,7 +21,7 @@ class SquareCalculations extends Square {
         $this->width = $width;
     }
 
-    public function area(){
+    public function area() : int {
         return $this->height * $this->width;
     } 
 }
@@ -35,7 +35,7 @@ class TriangleCalculations extends Triangle {
         $this->height = $height;
     }
 
-    public function area(){
+    public function area() : int{
         return ($this->base * $this->height) / 2 ;
     }
 }
@@ -43,17 +43,20 @@ class TriangleCalculations extends Triangle {
 
 class Calculations {
     
-    public $area = [];
+    public $area_sum ;
 
     public function sum_area(Shape $shapes){
-        foreach ($shapes as $shape) {
-            $area[$shape] = $shape->area();
-        }
-    echo array_sum($area);
+        
+        $area_sum = $shapes->area();   
+
+    return $area_sum;
 
     }
 
+    
+
 }
+
 
 
 
