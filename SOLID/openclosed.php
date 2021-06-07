@@ -41,8 +41,21 @@ class TriangleCalculations extends Triangle {
 }
 
 
-$square_area = new SquareCalculations(2,3);
-echo $square_area->area();
+class Calculations {
+    
+    public $area = [];
 
+    public function sum_area(Shape $shapes){
+        foreach ($shapes as $shape) {
+            $area[] = $shape->area();
+        }
+    return array_sum($area);
+
+    }
+
+}
+
+$square_area = new SquareCalculations(2,3);
 $triangle_area = new TriangleCalculations(6,3);
-echo $triangle_area->area();
+
+
