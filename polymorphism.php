@@ -18,13 +18,8 @@ class HVehicle implements Vehicle {
     }
 }
 
-//$vh = new Vehicle();
 $lv = new LVehicle();
 $hv = new HVehicle();
 
-//$lv->show();
-//$hv->show();
-//$vh->show();
 
-//$vh = $lv;//referencing to the light vehicle
 $lv->show();
