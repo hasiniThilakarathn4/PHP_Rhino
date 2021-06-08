@@ -2,7 +2,7 @@
 
 require_once ('books.class.php');
 
-class BookView {
+class BookView extends BookController {
 
     
     private $book_controller;
