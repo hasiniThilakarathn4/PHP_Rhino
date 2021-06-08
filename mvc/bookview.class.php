@@ -8,7 +8,7 @@ class BookView extends Books{
     private $book_controller;
 
     function __construct(BookController $book_controller ){
-        $
+        
         $this->book_controller = $book_controller;
     }
 
