@@ -7,16 +7,17 @@ require_once ('books.class.php');
 class BookController extends Books{
 
     private $book;
+    public $clicked;
 
-    function __construct($book){
+    function __construct($book, $clicked){
         $this->book = $book;
-
+        $this->clicked = $clicked;
     }
 
 
-    public function passBook($clicked){
+    public function passBook(){
 
-        if($clicked){
+        if($this->clicked){
             $result = $this->getBook($this->book);
             return $result;
         }else{

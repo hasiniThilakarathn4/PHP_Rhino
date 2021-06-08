@@ -52,7 +52,6 @@ class Calculations {
     return $area_sum;
 
     }
-
     
 
 }
